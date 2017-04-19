@@ -1,0 +1,138 @@
+[
+    /**
+    *** E - Evernote
+    **/
+    // Evernote
+    // C (N)
+    { "keys": ["ctrl+e", "ctrl+n"], "command": "sublime_tmpl", "args": {"type":"md"},"context":[{"key":"sublime_tmpl.md"}] },
+    { "keys": ["ctrl+e", "ctrl+c"], "command": "send_to_evernote" },
+    // U
+    { "keys": ["ctrl+e", "ctrl+u"], "command": "save_evernote_note" },
+    // R
+    { "keys": ["ctrl+e", "ctrl+r"], "command": "open_evernote_note", "args": {"ascending": false, "by_searching": "*", "max_notes": 30, "order": "updated"}  },
+    // help
+    { "keys": ["ctrl+e", "ctrl+h"], "command": "show_overlay", "args": {"overlay": "command_palette", "text": "Evernote:"} },
+
+    // search
+    { "keys": ["ctrl+e", "ctrl+s"], "command": "open_evernote_note", "args": {"by_searching": true, "order": "updated"}  },
+
+    /**
+    *** M - Markdown: MarkdownEditing、Markdown Preview
+    **/
+    // Markdown Preview
+    { "keys": ["ctrl+m", "ctrl+p"], "command": "markdown_preview_select", "args":{"target": "browser"}},
+    // help
+    { "keys": ["ctrl+m", "ctrl+h"], "command": "show_overlay", "args": {"overlay": "command_palette", "text": "Markdown:"} },
+
+    /**
+    *** G - Gist
+    **/
+    // Gist
+    // C (N)
+    { "keys": ["ctrl+g", "ctrl+n"], "command": "gist_private" },
+    { "keys": ["ctrl+g", "ctrl+c"], "command": "gist_private" },
+    // U
+    { "keys": ["ctrl+g", "ctrl+u"], "command": "gist_update_file" },
+    // R
+    { "keys": ["ctrl+g", "ctrl+r"], "command": "gist_list" },
+    // help
+    // 和 Git Help 冲突，Git Help 更为有用，注释掉！
+    // { "keys": ["ctrl+g", "ctrl+h"], "command": "show_overlay", "args": {"overlay": "command_palette", "text": "Gist:"} },
+
+    // add file
+    { "keys": ["ctrl+g", "ctrl+a"], "command": "gist_add_file" },
+
+    /**
+    *** S - SnippetMaker
+    **/
+    // SnippetMaker
+    // C (N)
+    { "keys": ["ctrl+s", "ctrl+n"], "command": "make_snippet" },
+    { "keys": ["ctrl+s", "ctrl+c"], "command": "make_snippet" },
+    // R
+    { "keys": ["ctrl+s", "ctrl+r"], "command": "edit_snippet" },
+    // help
+    { "keys": ["ctrl+s", "ctrl+h"], "command": "show_overlay", "args": {"overlay": "command_palette", "text": "SnippetMaker:"} },
+
+    /**
+    *** P - Project Manager
+    **/
+    // Project Manager
+    // open project
+    { "keys": ["ctrl+o"], "command": "project_manager", "args":{"action": "switch"}},
+    { "keys": ["ctrl+shift+o"], "command": "project_manager", "args":{"action": "new"}},
+    // help
+    { "keys": ["ctrl+p", "ctrl+h"], "command": "show_overlay", "args": {"overlay": "command_palette", "text": "Project Manager:"} },
+
+    /**
+    *** C - CodeFormatter
+    **/
+   // CodeFormatter
+    { "keys": ["ctrl+c", "ctrl+f"], "command": "code_formatter"},
+    // help
+    { "keys": ["ctrl+c", "ctrl+h"], "command": "show_overlay", "args": {"overlay": "command_palette", "text": "CodeFormatter:"} },
+
+    /**
+    *** T - Trailing Spaces
+    **/
+    // Trailing Spaces
+    { "keys": ["ctrl+t", "ctrl+s"], "command": "toggle_trailing_spaces" },
+    { "keys": ["ctrl+t", "ctrl+d"], "command": "delete_trailing_spaces" },
+    // help
+    { "keys": ["ctrl+t", "ctrl+h"], "command": "show_overlay", "args": {"overlay": "command_palette", "text": "Trailing Spaces:"} },
+
+    /**
+    *** D - DashDoc
+    **/
+    // DashDoc
+    { "keys": ["ctrl+d"], "command": "dash_doc"},
+    // help
+    { "keys": ["ctrl+d", "ctrl+h"], "command": "show_overlay", "args": {"overlay": "command_palette", "text": "DashDoc:"} },
+
+    /**
+    *** G - Git
+    **/
+    // Git
+    // help
+    { "keys": ["ctrl+g", "ctrl+h"], "command": "show_overlay", "args": {"overlay": "command_palette", "text": "Git:"} },
+
+    /**
+    *** A - Autocomplete + 定义位置查询：SublimeCodeIntel
+    **/
+    // Autocomplete + 定义位置查询：SublimeCodeIntel
+    // help
+    { "keys": ["ctrl+a", "ctrl+h"], "command": "show_overlay", "args": {"overlay": "command_palette", "text": "Git:"} },
+
+
+
+
+
+
+
+
+    // 以下是自带的：
+
+    // 查找替换
+    { "keys": ["super+r"], "command": "show_panel", "args": {"panel": "replace", "reverse": false} },
+    { "keys": ["ctrl+f"], "command": "show_panel", "args": {"panel": "find", "reverse": false} },
+    { "keys": ["ctrl+r"], "command": "show_panel", "args": {"panel": "replace", "reverse": false} },
+    { "keys": ["ctrl+shift+f"], "command": "show_panel", "args": {"panel": "find_in_files"} },
+    { "keys": ["super+shift+r"], "command": "show_panel", "args": {"panel": "find_in_files"} },
+    { "keys": ["ctrl+shift+r"], "command": "show_panel", "args": {"panel": "find_in_files"} },
+
+    // 转换大小写
+    { "keys": ["ctrl+u"], "command": "upper_case" },
+    { "keys": ["ctrl+l"], "command": "lower_case" },
+
+    // super+shift+enter / ⌘↩ 在当前行后插入新行
+    // super+enter / ⌘⇧↩ 在当前行前插入新行
+
+    // 选择各种括号内的全部内容
+    { "keys": ["ctrl+a"], "command": "expand_selection", "args": {"to": "brackets"} },
+
+    // 单个文件批量修改相同的内容，默认: ctrl+super+G
+    { "keys": ["ctrl+shift+a"], "command": "find_all_under" },
+
+    // toggle_side_bar
+    { "keys": ["ctrl+alt+s"], "command": "toggle_side_bar"}
+]
